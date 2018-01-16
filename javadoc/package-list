@@ -1,0 +1,8 @@
+org.formation.proxibanqueSpringDJMF.bean
+org.formation.proxibanqueSpringDJMF.config
+org.formation.proxibanqueSpringDJMF.controller
+org.formation.proxibanqueSpringDJMF.dao
+org.formation.proxibanqueSpringDJMF.entity
+org.formation.proxibanqueSpringDJMF.service
+org.formation.proxibanqueSpringDJMF.test
+org.formation.proxibanqueSpringDJMF.util

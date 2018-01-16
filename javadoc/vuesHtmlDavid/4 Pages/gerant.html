@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>page Directeur</title>
+	</head>
+
+	<body>
+	Bienvenue a la page Directeur. C'est encore en travaux!
+
+	 <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i><h3><strong> Liste Clients </strong></h3></div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+
+              	nom, prenom, refEmployee, adresse
+
+                <tr>
+                  <th>Nom</th>
+                  <th>Prenom</th>
+                  <th>refEmployee</th>
+                  <th>adresse</th>
+                  <th>Modification Conseiller</th>
+              	</tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Nom</th>
+                  <th>Prenom</th>
+                  <th>refEmployee</th>
+                  <th>adresse</th>
+                  <th>Modification Conseiller</th>
+                </tr>
+              </tfoot>
+              <c:forEach items="${ALLCLIENT}" var="client" >
+              <tbody>
+            
+                  <tr>
+                  <td>${conseiller.nom}</td>
+                  <td>${conseiller.prenom}</td>
+                  <td>${conseiller.refEmployee}</td>
+                  <td>${conseiller.adresse}</td>
+             
+                  <td><a href="./ConseillerUpdateServlet?idconseiller=${conseiller.id}"
+		 class="btn btn-info" role="button">Modification</a></td>
+              
+                </tr>
+                </c:forEach>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+
+
+	<script src="js/jquery-3.2.1.js"></script>
+	</body>
+</html>
